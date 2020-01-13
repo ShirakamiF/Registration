@@ -1,42 +1,71 @@
 {
   "project_info": {
-    "project_number": "245143136139",
-    "firebase_url": "https://directory-baafe.firebaseio.com",
-    "project_id": "directory-baafe",
-    "storage_bucket": "directory-baafe.appspot.com"
+    "project_number": "814276187203",
+    "firebase_url": "https://registrationfirebase-b1038.firebaseio.com",
+    "project_id": "registrationfirebase-b1038",
+    "storage_bucket": "registrationfirebase-b1038.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:245143136139:android:bb792dc5dba4690eb6f18e",
+        "mobilesdk_app_id": "1:814276187203:android:9d8ae8a54b5c3b5b4ab0f6",
         "android_client_info": {
           "package_name": "com.example.directory"
         }
       },
       "oauth_client": [
         {
-          "client_id": "245143136139-f7pdea21tafldaci9rilnlamt9q93esl.apps.googleusercontent.com",
+          "client_id": "814276187203-f8lo11fdl6hsu8jq9ulqpmcbo1ketb90.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.directory",
-            "certificate_hash": "e82c341cebaa5adddff55a7e1a12d3a932f41ef3"
+            "certificate_hash": "2dec96fe0f926347fd93f4cf00dbcc91d4885a75"
           }
         },
         {
-          "client_id": "245143136139-ajongjtfr6u6s04ke9av71rq1dhrfa4g.apps.googleusercontent.com",
+          "client_id": "814276187203-u3i8nj2hjdj08eiguql82fulucavanvn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAlqYEr17173E39PhZQIXCRwrW7emAk8FA"
+          "current_key": "AIzaSyCBmYqq7wO47cW-l_I5E-F_0cA7aF7gQxA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "245143136139-ajongjtfr6u6s04ke9av71rq1dhrfa4g.apps.googleusercontent.com",
+              "client_id": "814276187203-u3i8nj2hjdj08eiguql82fulucavanvn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814276187203:android:87e2a449cfa9cd914ab0f6",
+        "android_client_info": {
+          "package_name": "com.example.registrationfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814276187203-u3i8nj2hjdj08eiguql82fulucavanvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBmYqq7wO47cW-l_I5E-F_0cA7aF7gQxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814276187203-u3i8nj2hjdj08eiguql82fulucavanvn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

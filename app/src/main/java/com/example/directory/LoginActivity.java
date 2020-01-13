@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,8 +27,9 @@ public class LoginActivity extends Activity {
     FirebaseAuth auth;
 
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
+
+        super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
@@ -37,8 +40,8 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
 
-        Email = (EditText) getView().findViewById(R.id.Email);
-        Password = (EditText) getView().findViewById(R.id.Password);
+        Email = (EditText) findViewById(R.id.Email);
+        Password = (EditText) findViewById(R.id.Password);
 
         auth = FirebaseAuth.getInstance();
 
@@ -53,32 +56,31 @@ public class LoginActivity extends Activity {
                     return;
                 }
 
-                if (pswd.isEmpty()) {
+                if (password.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter your password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (pswd.length() < 6) {
+                if (password.length() < 6) {
                     Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                auth.CreateUserwithEmailandPassword(Email, Password)
-                        .addOnCompleteListener(LoginActivity.this, new onCompleteListener<AuthResult>() {
-
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(LoginActivity.this, "createUserwithEmail:onComplete" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                if (!task.isSucessful()) {
-                                    Toast.makeText(LoginActivity.this, "Failed to create account." + task.getException(), Toast.LENGTH_SHORT).show();
-
-                                } else {
-                                    startActivity(new intent(LoginActivity.this, MainActivity.class));
-                                    finish();
-                                }
+                } else if (!(emailadd.isEmpty() && password.isEmpty())) {
+                    auth.createUserWithEmailAndPassword(emailadd, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "Login Unsuccessful", Toast.LENGTH_SHORT).show();
+                            } else {
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }
-                        });
-
+                        }
+                    });
+                } else {
+                    Toast.makeText(getApplicationContext(), "Error Occurred", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 }
 
