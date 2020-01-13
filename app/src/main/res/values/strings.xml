@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Directory</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="signupaccount"> Sign Up Account</string>
+    <string name="createaccount">Create Account</string>
+    <string name="login">Login</string>
+    <string name="gender">Gender</string>
+    <string name="registered">Already have an account? Sign In Here</string>
+    <string name="haveaccount">Do not have account? Sign Up Here</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+</resources>
